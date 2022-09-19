@@ -1,0 +1,81 @@
+/* Project information - Global */
+#project-info {
+    margin: 100px auto 0 auto;
+
+    max-width: 1000px;
+
+    display: flex;
+    flex-flow: column wrap;
+
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.background-image-syne {
+    background: url(../img/projects/syne/project-background-syne.png) fixed center;
+    background-size: cover;
+}
+
+body.background-image-destroy-the-mothership {
+    background: url(../img/projects/destroy-the-mothership/destroy-the-mothership.png) fixed no-repeat center;
+    background-size: cover;
+}
+
+body.background-image-boreas {
+    background: url(../img/projects/boreas/project-background-boreas.png) fixed center;
+    background-size: cover;
+}
+
+body.background-image-nonies-party {
+    background: url(../img/projects/nonies-party/nonies-party.png) fixed center;
+    background-size: cover;
+}
+
+body.background-image-progression-from-hell {
+    background: url(../img/projects/progression-from-hell/progression-from-hell.png) fixed center;
+    background-size: cover
+}
+
+body.background-image-spacecraft-wreck {
+    background: url(../img/projects/spacecraft-wreck/spacecraft-wreck.png) fixed center;
+    background-size: cover;
+}
+
+/* Project information - Header */
+#project-header {
+    margin: 0 auto 0 auto;
+
+    width: 370px;
+
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#project-info>h1 {
+    text-align: center;
+    margin: 0.67em 60px;
+}
+
+#project-header>#project-state>.project-state-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    width: 100%;
+
+    font-size: 15px;
+}
+
+.project-state-row>.project-state-row-heading {
+    width: 140px;
+}
+
+.project-state-row>.project-state-row-content {
+    width: 200px;
+}
+
+/* Project information - Body */
+#project-body {
+    width: 80%;
+    margin: 30px auto 30px auto;
+}
