@@ -62,7 +62,7 @@ body.background-image-spacecraft-wreck {
     justify-content: center;
 
     width: 100%;
-
+ 
     font-size: 15px;
 }
 
@@ -78,4 +78,73 @@ body.background-image-spacecraft-wreck {
 #project-body {
     width: 80%;
     margin: 30px auto 30px auto;
+}
+
+/* Project information - Accordion */
+.accordion {
+    /* border: 1px solid red; */
+}
+
+.accordion > div {
+    margin-bottom: 2rem;
+}
+
+.accordion-label {
+    cursor: pointer;
+
+    padding: 0.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: cyan;
+    color: black;
+
+    font-size: 1.2rem;
+
+    transition: background 0.1s;
+}
+
+.accordion-label::after {
+    content: "+";
+    
+    margin-right: 1rem;
+    transition: transform 0.4s;
+
+}
+
+.accordion-content {
+    padding-left: 20px;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.5s;
+}
+
+.accordion-input {
+    display: none;
+}
+
+.accordion-input:checked ~ .accordion-content{
+    max-height: fit-content;
+}
+
+.accordion-input:checked ~ .accordion-label::after {
+    transform: rotate(-45deg);
+}
+
+/* Code snippet */
+.code-snippet-header {
+    margin: 0;
+}
+
+.code-snippet-header > p {
+    margin: 0;
+}
+
+.code-snippet-content {
+    margin: 0;
+    padding: 0;
 }
