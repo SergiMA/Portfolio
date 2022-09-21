@@ -81,10 +81,6 @@ body.background-image-spacecraft-wreck {
 }
 
 /* Project information - Accordion */
-.accordion {
-    /* border: 1px solid red; */
-}
-
 .accordion > div {
     margin-bottom: 2rem;
 }

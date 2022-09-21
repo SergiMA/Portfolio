@@ -13,7 +13,12 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/normalize.css">
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+
     <script src="js/fontawesome.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 <body class="background-image-destroy-the-mothership">
@@ -106,10 +111,321 @@
                 </p>
                 <p class="dark-theme-normal">
                     I'm excited developing this game because I'm not just trying to greatly improve my skills to create
-                    complex AI, but because I'm also trying to do everything a game requires apart from my specialisation,
+                    complex AI, but because I'm also trying to do everything a game requires apart from my
+                    specialisation,
                     programming.
                     That means I'm trying to make my own audios, modeling, VFX, etc.
                 </p>
+                <div class="accordion dark-theme-normal">
+                    <input type="checkbox" name="destroy-the-mothership-fsm-accordion" id="destroy-the-mothership-fsm"
+                        class="accordion-input">
+                    <label for="destroy-the-mothership-fsm" class="accordion-label">Finite State Machine for spaceships
+                        controlled by AI</label>
+                    <div class="accordion-content">
+                        <p>
+                            I developed a Finite State Machine (FSM) that supports nested states. The FSM's structure is
+                            finished and I'm adding new states. So, for the moment, this is a work in progress work. I'm
+                            trying to implement more states to the AI in order to behav like a player. For the moment I
+                            have a patrolling state, but later on I will add, for example, a shopping state.
+                        </p>
+                        <div class="accordion dark-theme-normal">
+                            <input type="checkbox" name="destroy-the-mothership-fsm-snippet"
+                                id="destroy-the-mothership-fsm-snippet-fighter-ai-state-manager"
+                                class="accordion-input">
+                            <label for="destroy-the-mothership-fsm-snippet-fighter-ai-state-manager"
+                                class="accordion-label">CODE SNIPPET [C#] - State Manager</label>
+                            <div class="accordion-content">
+                                <pre>
+                                    <code>
+using UnityEngine;
+
+namespace SpaceshipsFSM.FighterAI
+{
+    [RequireComponent(typeof(Rigidbody))]
+    public class FighterAIStateManager : MonoBehaviour
+    {
+        // Properties definition
+
+        // Design properties
+        [SerializeField] float stoppingDistance = 10f;
+        [SerializeField] float movementSpeed = 20f;
+        [SerializeField] float patrollingRadius = 1000f;
+        [SerializeField] float turningSpeed = 1f;
+
+        // Private properties
+        Vector3 position;
+        Vector3 targetPosition;
+        Rigidbody rb;
+        Quaternion lookRotation;
+
+        FighterAIBaseState currentState;
+        FighterAIStateFactory states;
+
+        float remainingDistance;
+
+        // Getters &amp; Setters definition
+        public FighterAIBaseState CurrentState { get { return currentState; } set { currentState = value; } }
+        public Quaternion Rotation { get { return transform.rotation; } }
+        public Vector3 TargetPosition { get { return targetPosition; } set { targetPosition = value; } }
+        public Quaternion LookRotation { get { return lookRotation; } set { lookRotation = value; } }
+        public float TurningSpeed { get { return turningSpeed; } }
+        public float StoppingDistance { get { return stoppingDistance; } }
+        public Rigidbody Rigidbody { get { return rb; } }
+        public float RemainingDistance { get { return remainingDistance; } }
+        public float MovementSpeed { get { return movementSpeed; } }
+        public float PatrollingRadius { get { return patrollingRadius; } }
+
+
+        // Methods definition
+
+        /// &lt;summary&gt;
+        /// Awake is called when the script instance is being loaded.
+        /// &lt;/summary&gt;
+        void Awake()
+        {
+            GetComponents();
+        }
+
+        /// &lt;summary&gt;
+        /// Start is called on the frame when a script is enabled just before
+        /// any of the Update methods is called the first time.
+        /// &lt;/summary&gt;
+        void Start()
+        {
+            // Initialize properties
+            lookRotation.eulerAngles = transform.forward;
+
+            // Initialize state
+            states = new FighterAIStateFactory(this);
+            currentState = states.Patrol();
+            currentState.EnterStates(currentState);
+        }
+
+        /// &lt;summary&gt;
+        /// Update is called every frame, if the MonoBehaviour is enabled.
+        /// &lt;/summary&gt;
+        void Update()
+        {
+            currentState.UpdateStatesLogic();
+        }
+
+        /// &lt;summary&gt;
+        /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
+        /// &lt;/summary&gt;
+        void FixedUpdate()
+        {
+            currentState.UpdateStatesPhysics();
+        }
+
+        void GetComponents()
+        {
+            rb = GetComponent&lt;Rigidbody&gt;();
+        }
+
+#if UNITY_EDITOR
+        /// &lt;summary&gt;
+        /// Callback to draw gizmos that are pickable and always drawn.
+        /// &lt;/summary&gt;
+        void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(Vector3.zero, patrollingRadius);
+        }
+#endif
+    }
+}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                        <div class="accordion dark-theme-normal">
+                            <input type="checkbox" name="destroy-the-mothership-fsm-snippet"
+                                id="destroy-the-mothership-fsm-snippet-state-factory" class="accordion-input">
+                            <label for="destroy-the-mothership-fsm-snippet-state-factory" class="accordion-label">CODE
+                                SNIPPET [C#] - State Factory</label>
+                            <div class="accordion-content">
+                                <pre>
+                                    <code>
+using System.Collections.Generic;
+
+namespace SpaceshipsFSM.FighterAI
+{
+    public class FighterAIStateFactory
+    {
+        enum States
+        {
+            Patrol,
+            SearchWaypoint,
+            MoveToWaypoint
+        }
+
+        FighterAIStateManager context;
+        Dictionary&lt;States, FighterAIBaseState&gt; states = new Dictionary&lt;States, FighterAIBaseState&gt;();
+
+        public FighterAIStateFactory(FighterAIStateManager currentContext)
+        {
+            context = currentContext;
+
+            states.Add(States.SearchWaypoint, new FighterAISearchingWaypointState(context, this));
+            states.Add(States.MoveToWaypoint, new FighterAIMovingToWaypointState(context, this));
+            states.Add(States.Patrol, new FighterAIPatrollingState(context, this));
+        }
+
+        // Patrol state and sub-states
+
+        /// &lt;summary&gt;Returns the patrolling state&lt;/summary&gt;
+        public FighterAIBaseState Patrol() { return states[States.Patrol]; }
+
+        /// &lt;summary&gt;Returns the searching waypoint state&lt;/summary&gt;
+        public FighterAIBaseState SearchWaypoint() { return states[States.SearchWaypoint]; }
+
+        /// &lt;summary&gt;Returns the moving to waypoint state&lt;/summary&gt;
+        public FighterAIBaseState MoveToWaypoint() { return states[States.MoveToWaypoint]; }
+    }
+}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                        <div class="accordion dark-theme-normal">
+                            <input type="checkbox" name="destroy-the-mothership-fsm-snippet"
+                                id="destroy-the-mothership-fsm-snippet-base-state" class="accordion-input">
+                            <label for="destroy-the-mothership-fsm-snippet-base-state" class="accordion-label">CODE
+                                SNIPPET [C#] - Base state</label>
+                            <div class="accordion-content">
+                                <pre>
+                                    <code>
+using UnityEngine;
+
+namespace SpaceshipsFSM.FighterAI
+{
+    public abstract class FighterAIBaseState
+    {
+        protected bool isRootState = false;
+        protected FighterAIStateManager ctx;
+        protected FighterAIStateFactory factory;
+        protected FighterAIBaseState currentSubState;
+        protected FighterAIBaseState currentSuperState;
+
+        public FighterAIBaseState(FighterAIStateManager currentContext, FighterAIStateFactory fighterAIStateFactory)
+        {
+            ctx = currentContext;
+            factory = fighterAIStateFactory;
+        }
+
+        /// &lt;summary&gt;Called once the state has been entered&lt;/summary&gt;
+        public abstract void EnterState();
+
+        /// &lt;summary&gt;Called every frame for the current state&lt;/summary&gt;
+        public abstract void UpdateStateLogic();
+
+        /// &lt;summary&gt;Called every fixed framerate frame for the current state&lt;/summary&gt;
+        public abstract void UpdateStatePhysics();
+
+        /// &lt;summary&gt;Called once when exiting the state&lt;/summary&gt;
+        public abstract void ExitState();
+
+        /// &lt;summary&gt;Check if it is needed to switch into another state&lt;/summary&gt;
+        public abstract void CheckSwitchState();
+
+        /// &lt;summary&gt;Initialize the sub-state of the current state&lt;/summary&gt;
+        public abstract void InitializeSubState();
+
+        /// &lt;summary&gt;Execute the EnterState method from the current state and its sub-states&lt;/summary&gt;
+        /// &lt;param name=&quot;newState&quot;&gt;New state to enter&lt;/param&gt;
+        public void EnterStates(FighterAIBaseState newState)
+        {
+            // Execute enter state method from the new state
+            newState.EnterState();
+
+            // If it has a substate, call EnterStates() method from it (recursively)
+            if(newState.currentSubState != null)
+            {
+                newState.currentSubState.EnterStates(currentSubState);
+            }
+        }
+
+        /// &lt;summary&gt;Called every frame for the current state and its sub-states&lt;/summary&gt;
+        public void UpdateStatesLogic()
+        {
+            // Update the current state
+            UpdateStateLogic();
+
+            // If it has a substate, call UpdateStates() method from it. This way we are calling the UpdateState() of the sub-states with a chain effect
+            if (currentSubState != null)
+            {
+                currentSubState.UpdateStatesLogic();
+            }
+        }
+
+        /// &lt;summary&gt;Called every fixed framerate frame for the current state and its sub-states&lt;/summary&gt;
+        public void UpdateStatesPhysics()
+        {
+            // Update the physics of the current state
+            UpdateStatePhysics();
+
+            // If it has a substate, call UpdatePhysicsStates() method from it (recursively)
+            if(currentSubState != null)
+            {
+                currentSubState.UpdateStatesPhysics();
+            }
+        }
+
+        /// &lt;summary&gt;Called once when exiting the current state and its sub-states&lt;/summary&gt;
+        public void ExitStates()
+        {
+            // Exit the current state
+            ExitState();
+
+            // If it has a substate, call ExitStates() method from it (recursively)
+            if (currentSubState != null)
+            {
+                currentSubState.ExitStates();
+            }
+        }
+
+        /// &lt;summary&gt;Switch state from the current state to the new state&lt;/summary&gt;
+        /// &lt;param name=&quot;newState&quot;&gt;New state to change&lt;/param&gt;
+        protected void SwitchState(FighterAIBaseState newState)
+        {
+            // Execute exit state method from the current state
+            ExitStates();
+
+            // Execute enter state method from the new state
+            newState.EnterStates(newState);
+
+            if (isRootState)
+            {
+                // Apply transition
+                ctx.CurrentState = newState;
+            }
+            else if (currentSuperState != null)
+            {
+                currentSuperState.SetSubState(newState);
+            }
+        }
+
+        /// &lt;summary&gt;Set a super-state. Meaning this state is just a sub-state from another state&lt;/summary&gt;
+        /// &lt;param name=&quot;newSuperState&quot;&gt;New super-state for this state&lt;/param&gt;
+        protected void SetSuperState(FighterAIBaseState newSuperState)
+        {
+            currentSuperState = newSuperState;
+        }
+
+        /// &lt;summary&gt;Set a sub-state. Meaning this state is a super-state from another state&lt;/summary&gt;
+        /// &lt;param name=&quot;newSubState&quot;&gt;New sub-state for this state&lt;/param&gt;
+        protected void SetSubState(FighterAIBaseState newSubState)
+        {
+            currentSubState = newSubState;
+            newSubState.SetSuperState(this);
+        }
+    }
+}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <p class="dark-theme-subtle">
                     Information about the game will be updated at a later date.
                 </p>
