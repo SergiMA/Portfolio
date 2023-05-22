@@ -2,23 +2,26 @@
 <html lang="en-UK">
 
 <head>
+    <!-- Metadata-->
     <meta charset="utf-8">
     <meta name="description" content="Syne is a first-person psychological horror game developed by HidBox Games">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Syne | Sergi Monzó</title>
 
-    <!-- <link rel="stylesheet" href="../css/index.css"> -->
+    <!-- Style references -->
     <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
 
-    <script src="js/fontawesome.js" crossorigin="anonymous"></script>
+    <!-- Script references -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="../js/common.js"></script>
 </head>
 
 <body class="background-image-syne">
@@ -46,70 +49,77 @@
                     </a></div>
             </div>
         </div>
+
+        <div class="slider-container">
+            <div class="slider">
+                <div id="syne-slide-01" class="slide"><img src="../img/projects/syne/syne_carousel_images/Syne_CarouselItem_01.png" alt="Syne slide image 01"></div>
+                <div id="syne-slide-02" class="slide"><img src="../img/projects/syne/syne_carousel_images/Syne_CarouselItem_02.png" alt="Syne slide image 02"></div>
+            </div>
+        </div>
     </header>
 
     <section>
         <div id="project-info" class="backdrop-filter-blur">
             <!-- Project title -->
-            <h1 class="dark-theme-normal">Syne</h1>
+            <h1 class="light-theme-heading">Syne</h1>
             <div id="project-header">
                 <!-- Project state (table style) -->
                 <div id="project-state">
                     <div class="project-state-row">
                         <div class="project-state-item project-state-row-heading bold">
-                            <p class="dark-theme-normal">Project status</p>
+                            <p class="light-theme-normal">Project status</p>
                         </div>
                         <div class="project-state-item project-state-row-content">
-                            <p class="dark-theme-normal">Ongoing</p>
+                            <p class="light-theme-normal">Ongoing</p>
                         </div>
                     </div>
                     <div class="project-state-row">
                         <div class="project-state-item project-state-row-heading bold">
-                            <p class="dark-theme-normal">Project type</p>
+                            <p class="light-theme-normal">Project type</p>
                         </div>
                         <div class="project-state-item project-state-row-content">
-                            <p class="dark-theme-normal">Group project</p>
+                            <p class="light-theme-normal">Group project</p>
                         </div>
                     </div>
                     <div class="project-state-row">
                         <div class="project-state-item project-state-row-heading bold">
-                            <p class="dark-theme-normal">Game Engine</p>
+                            <p class="light-theme-normal">Game Engine</p>
                         </div>
                         <div class="project-state-item project-state-row-content">
-                            <p class="dark-theme-normal">Unity</p>
+                            <p class="light-theme-normal">Unity</p>
                         </div>
                     </div>
                     <div class="project-state-row">
                         <div class="project-state-item project-state-row-heading bold">
-                            <p class="dark-theme-normal">Languages used</p>
+                            <p class="light-theme-normal">Languages used</p>
                         </div>
                         <div class="project-state-item project-state-row-content">
-                            <p class="dark-theme-normal">C#</p>
+                            <p class="light-theme-normal">C#</p>
                         </div>
                     </div>
                     <div class="project-state-row">
                         <div class="project-state-item project-state-row-heading bold">
-                            <p class="dark-theme-normal">Primary role(s)</p>
+                            <p class="light-theme-normal">Primary role(s)</p>
                         </div>
                         <div class="project-state-item project-state-row-content">
-                            <p class="dark-theme-normal">Generalist programmer</p>
+                            <p class="light-theme-normal">Generalist programmer</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div id="project-body">
-                <p class="dark-theme-normal">
+                <p class="light-theme-normal">
                     Syne is a psychological horror video game, played in a first-person perspective.
                 </p>
-                <p class="dark-theme-normal">
+                <p class="light-theme-normal">
                     My role in this project is programming almost everything. Except for the VFX related stuff, I
                     contribute in designing the code, creating gameplay mechanics or the AI behaviour, making the audios
                     sound where they need to sound, facilitating the level design task of customisating things on
                     a scene with some custom editors or gizmos and providing utility to the UI elements like the game
                     menu.
                 </p>
-                <div class="accordion dark-theme-normal">
+                <div class="accordion light-theme-normal">
                     <div>
                         <input type="checkbox" name="syne-settings-accordion" id="syne-settings"
                             class="accordion-input">
@@ -121,7 +131,7 @@
                                 I have called "selectors") and change the game configuration (for example, change the
                                 antialiasing or the audio volume).
                             </p>
-                            <div class="accordion dark-theme-normal">
+                            <div class="accordion light-theme-normal">
                                 <input type="checkbox" name="syne-settings" id="syne-settings-snippet-isetting"
                                     class="accordion-input">
                                 <label for="syne-settings-snippet-isetting" class="accordion-label">CODE SNIPPET [C#] -
@@ -142,7 +152,7 @@ public interface ISetting
                                     </pre>
                                 </div>
                             </div>
-                            <div class="accordion dark-theme-normal">
+                            <div class="accordion light-theme-normal">
                                 <input type="checkbox" name="syne-settings" id="syne-settings-snippet-antialiasing"
                                     class="accordion-input">
                                 <label for="syne-settings-snippet-antialiasing" class="accordion-label">CODE SNIPPET
@@ -328,7 +338,7 @@ public class AntialiasingSetting : MonoBehaviour, ISetting
                         </div>
                     </div>
                 </div>
-                <p class="dark-theme-subtle">
+                <p class="light-theme-subtle">
                     Information about the game will be updated at a later date.
                 </p>
             </div>

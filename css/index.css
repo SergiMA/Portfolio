@@ -58,12 +58,20 @@ video {
 
 /* Section - Projects */
 #my-projects {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
     color: white;
+    background-color: black;    
 }
 
 .grid-container {
     width: 80%;
-    margin: 50px auto auto auto;
+    margin: 10px auto auto auto;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
@@ -189,25 +197,31 @@ video {
 
 /* Section - My curriculum */
 #my-cv {
-    background-color: white;
-
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
+
+    background-color: white;
 }
 
 /* Footer - Contact me */
 #contact {
-    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
 }
 
 .contact-content {
-    width: 80%;
-
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     margin: auto;
+
+    width: 80%;
 
     text-align: center;
 }
@@ -237,17 +251,6 @@ video {
 
 .itch-io-icon:hover {
     color: #FF2449;
-}
-
-/* Animations */
-@keyframes scroll-content-animation {
-    0% {
-        margin-top: 0px;
-    }
-
-    100% {
-        margin-top: -400px;
-    }
 }
 
 /* Media queries */

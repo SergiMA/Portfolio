@@ -1,54 +1,54 @@
 /* Project information - Global */
-#project-info {
-    margin: 100px auto 0 auto;
-
-    max-width: 1000px;
-
-    display: flex;
-    flex-flow: column wrap;
-
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
 body.background-image-syne {
-    background: url(../img/projects/syne/project-background-syne.png) fixed center;
+    /* background: url(../img/projects/syne/project-background-syne.png) fixed center; */
     background-size: cover;
 }
 
 body.background-image-destroy-the-mothership {
-    background: url(../img/projects/destroy-the-mothership/destroy-the-mothership.png) fixed no-repeat center;
+    /* background: url(../img/projects/destroy-the-mothership/destroy-the-mothership.png) fixed no-repeat center; */
     background-size: cover;
 }
 
 body.background-image-boreas {
-    background: url(../img/projects/boreas/project-background-boreas.png) fixed center;
+    /* background: url(../img/projects/boreas/project-background-boreas.png) fixed center; */
     background-size: cover;
 }
 
 body.background-image-nonies-party {
-    background: url(../img/projects/nonies-party/nonies-party.png) fixed center;
+    /* background: url(../img/projects/nonies-party/nonies-party.png) fixed center; */
     background-size: cover;
 }
 
 body.background-image-progression-from-hell {
-    background: url(../img/projects/progression-from-hell/project-background-progression-from-hell.png) fixed center;
+    /* background: url(../img/projects/progression-from-hell/project-background-progression-from-hell.png) fixed center; */
     background-size: cover
 }
 
 body.background-image-spacecraft-wreck {
-    background: url(../img/projects/spacecraft-wreck/spacecraft-wreck.png) fixed center;
+    /* background: url(../img/projects/spacecraft-wreck/spacecraft-wreck.png) fixed center; */
     background-size: cover;
 }
 
 /* Project information - Header */
 #project-header {
-    margin: 0 auto 0 auto;
-
-    width: 370px;
-
     display: flex;
     flex-flow: column wrap;
+    
+    width: 370px;
+    margin: 0 auto 0 auto;
+}
+
+#project-info {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    
+    /* max-width: 1000px; */
+    /* margin: 100px auto 0 auto; */
+
+
+    /* border-radius: 20px; */
+    background-color: white;
 }
 
 #project-info>h1 {
@@ -86,18 +86,17 @@ body.background-image-spacecraft-wreck {
 }
 
 .accordion-label {
-    cursor: pointer;
-
-    padding: 0.6rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    background-color: cyan;
-    color: black;
-
+    
+    padding: 0.6rem;
     font-size: 1.2rem;
+
+    cursor: pointer;
+
+    background-color: black;
+    color: white;
 
     transition: background 0.1s;
 }
