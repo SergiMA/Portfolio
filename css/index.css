@@ -123,6 +123,15 @@ video {
     transform: scale(1.1);
 }
 
+#grid-cover-astragarden {
+    background-image: url(../img/projects/astragarden/astragarden.png);
+    filter: blur(var(--status-blur-amount));
+}
+
+#astragarden-status::after {
+    content: 'WIP';
+}
+
 #grid-cover-syne {
     background-image: url(../img/projects/syne/Syne.png);
     filter: blur(var(--status-blur-amount));
@@ -133,7 +142,7 @@ video {
 }
 
 #destroy-the-mothership-status::after {
-    content: 'WIP';
+    content: 'On hold';
 }
 
 .project-item-status {
