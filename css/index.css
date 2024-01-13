@@ -123,6 +123,15 @@ video {
     transform: scale(1.1);
 }
 
+#grid-cover-hacking-ops {
+    background-image: url(../img/projects/hacking-ops/hacking-ops.png);
+    filter: blur(var(--status-blur-amount));
+}
+
+#hacking-ops-status::after {
+    content: 'WIP';
+}
+
 #grid-cover-astragarden {
     background-image: url(../img/projects/astragarden/astragarden.png);
     filter: blur(var(--status-blur-amount));

@@ -1,31 +1,29 @@
 /* Project information - Global */
+body.background-image-hacking-ops {
+    background-size: cover;
+}
+
 body.background-image-syne {
-    /* background: url(../img/projects/syne/project-background-syne.png) fixed center; */
     background-size: cover;
 }
 
 body.background-image-destroy-the-mothership {
-    /* background: url(../img/projects/destroy-the-mothership/destroy-the-mothership.png) fixed no-repeat center; */
     background-size: cover;
 }
 
 body.background-image-boreas {
-    /* background: url(../img/projects/boreas/project-background-boreas.png) fixed center; */
     background-size: cover;
 }
 
 body.background-image-nonies-party {
-    /* background: url(../img/projects/nonies-party/nonies-party.png) fixed center; */
     background-size: cover;
 }
 
 body.background-image-progression-from-hell {
-    /* background: url(../img/projects/progression-from-hell/project-background-progression-from-hell.png) fixed center; */
     background-size: cover
 }
 
 body.background-image-spacecraft-wreck {
-    /* background: url(../img/projects/spacecraft-wreck/spacecraft-wreck.png) fixed center; */
     background-size: cover;
 }
 
