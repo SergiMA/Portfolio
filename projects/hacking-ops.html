@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Hacking Ops is a game where you're a hacker that needs to steal some documents from a corportation'">
+    <meta name="description" content="Hacking Ops is a sci-fi action/stealth game where you play as a hacker who has infiltrated a corporation's headquarters to steal some documents.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hacking Ops | Sergi Monzó</title>
@@ -72,7 +72,6 @@
                 </div>
             </div>
             <div id="project-header">
-                <!-- Project title -->
                 <!-- Project state (table style) -->
                 <div id="project-state">
                     <div class="project-state-row">
@@ -136,7 +135,7 @@
                     <div>
                         <input type="checkbox" name="hacking-ops-quest-system-accordion" id="hacking-ops-quest-system" class="accordion-input">
                         <label for="hacking-ops-quest-system" class="accordion-label">Quest system</label>
-                        <div class="accordion-content"> <!-- Contains everything realted to the Quest System-->
+                        <div class="accordion-content">
                             <p>
                                 As an example of code, I'll show the Quest System. This system has been made with the primary intention of connecting things in a scene
                                 or map to make other things occur. For example, starting a cutscene when the player reaches some point or opening a door when some enemies have died.
@@ -148,20 +147,20 @@
                             <p>
                                 The quest system is split into two sections: the kernel, a common part of this system that can be moved to any kind of game, and the specific section for each game.
                             </p>
-                            <div class="accordion light-theme-normal"> <!-- Contains Quest System's kernel-->
+                            <div class="accordion light-theme-normal">
                                 <div>
                                     <input type="checkbox" name="hacking-ops-quest-system-kernel-accordion" id="hacking-ops-quest-system-kernel" class="accordion-input">
                                     <label for="hacking-ops-quest-system-kernel" class="accordion-label">Quest System kernel</label>
-                                    <div class="accordion-content"> <!-- Contains Quest System's kernel information -->
+                                    <div class="accordion-content">
                                         <p>
                                             The kernel or common part for every game is composed of Quests and Goals. In this case, I've wanted to make use of an Event Queue and a Service Locator,
                                             but it's optional. I've chosen to use them because I wanted to try as many design patterns as possible. It can be slightly modified to use only C# events.
                                             Right now, I'm using both C# events and the Event Queue.
                                         </p>
-                                        <div class="accordion light-theme-normal"> <!-- Contains Quest snippet -->
+                                        <div class="accordion light-theme-normal">
                                             <input type="checkbox" name="hacking-ops-quest-system" id="hacking-ops-snippet-quest" class="accordion-input">
                                             <label for="hacking-ops-snippet-quest" class="accordion-label">CODE SNIPPET [C#] - Quest</label>
-                                            <div class="accordion-content"> <!-- Contains raw Quest code -->
+                                            <div class="accordion-content">
                                                 <pre>
                                                     <code>
 using System.Collections.Generic;
@@ -214,12 +213,12 @@ namespace HackingOps.Common.QuestSystem
 }
                                                     </code>
                                                 </pre>
-                                            </div> <!-- class="accordion-content" from "hacking-ops-snippet-quest" contains raw Quest code -->
-                                        </div> <!-- class="accordion light-theme-normal" containing hacking-ops-snippet-quest -->
-                                        <div class="accordion light-theme-normal"> <!-- Contains Goal snippet -->
+                                            </div>
+                                        </div>
+                                        <div class="accordion light-theme-normal">
                                             <input type="checkbox" name="hacking-ops-quest-system" id="hacking-ops-snippet-goal" class="accordion-input">
                                             <label for="hacking-ops-snippet-goal" class="accordion-label">CODE SNIPPET [C#] - Goal</label>
-                                            <div class="accordion-content"> <!-- Contains raw Goal code -->
+                                            <div class="accordion-content">
                                                 <pre>
                                                     <code>
 using HackingOps.Common.Events;
@@ -278,15 +277,15 @@ namespace HackingOps.Common.QuestSystem
 }
                                                     </code>
                                                 </pre>
-                                            </div> <!-- class="accordion-content" from "hacking-ops-snippet-goal" contains raw Goal code-->
+                                            </div>
                                         </div>
-                                    </div> <!-- class="accordion-content" contains Quest System's kernel information -->
+                                    </div>
                                 </div>
                             </div>
-                            <div class="accordion light-theme-normal"> <!-- Contains Quest System's specific content for each game-->
+                            <div class="accordion light-theme-normal">
                                 <input type="checkbox" name="hacking-ops-quest-system" id="hacking-ops-specific-content" class="accordion-input">
                                 <label for="hacking-ops-specific-content" class="accordion-label">Quest System specific content</label>
-                                <div class="accordion-content"> <!-- Contains Quest System's specific content information-->
+                                <div class="accordion-content">
                                     <p>
                                         The specific content about this system is strictly attached to the game, which includes specific Goals and Completion Actions.
                                         There are different kinds of Goals based on the project. For example, a Kill Goal (kill some enemies to complete the goal) or
@@ -294,10 +293,10 @@ namespace HackingOps.Common.QuestSystem
                                         It may be activating and deactivating objects, unlocking a door, or rewarding the player with a weapon, all depending on the
                                         project needs. Let's see a Kill Goal and a CompletionAction that changes the state of some objects, for example.
                                     </p>
-                                    <div class="accordion light-theme-normal"> <!-- Contains KillGoal snippet-->
+                                    <div class="accordion light-theme-normal">
                                         <input type="checkbox" name="hacking-ops-quest-system" id="hacking-ops-snippet-kill-goal" class="accordion-input">
                                         <label for="hacking-ops-snippet-kill-goal" class="accordion-label">CODE SNIPPET [C#] - KillGoal</label>
-                                        <div class="accordion-content"> <!-- Contains raw KillGoal code -->
+                                        <div class="accordion-content">
                                             <pre>
                                                 <code>
 using HackingOps.Characters.Common;
@@ -364,12 +363,12 @@ namespace HackingOps.Common.QuestSystem
 }
                                                 </code>
                                             </pre>
-                                        </div> <!-- class="accordion-content" from "hacking-ops-snippet-kill-goal" contains raw KillGoal code -->
-                                    </div> <!-- class="accordion light-theme-normal" contains KillGoal snippet -->
-                                    <div class="accordion light-theme-normal"> <!-- Contains CompletionAction snippet-->
+                                        </div>
+                                    </div>
+                                    <div class="accordion light-theme-normal">
                                         <input type="checkbox" name="hacking-ops-quest-system" id="hacking-ops-snippet-completion-action" class="accordion-input">
                                         <label for="hacking-ops-snippet-completion-action" class="accordion-label">CODE SNIPPET [C#] - CompletionActionObjectStateChanger</label>
-                                        <div class="accordion-content"> <!-- Contains raw KillGoal code -->
+                                        <div class="accordion-content">
                                             <pre>
                                                 <code>
 using UnityEngine;
@@ -404,11 +403,11 @@ namespace HackingOps.Common.QuestSystem.Quests
 }
                                                 </code>
                                             </pre>
-                                        </div> <!-- class="accordion-content" from "hacking-ops-snippet-completion-action" contains raw CompletionAction code -->
-                                    </div> <!-- class="accordion light-theme-normal" contains CompletionAction snippet -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div> <!-- class="accordion light-theme-normal" containing everything related to the Quest System -->
+                        </div>
                     </div>
                 </div>
             </div>
