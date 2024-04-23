@@ -125,11 +125,6 @@ video {
 
 #grid-cover-hacking-ops {
     background-image: url(../img/projects/hacking-ops/hacking-ops.png);
-    filter: blur(var(--status-blur-amount));
-}
-
-#hacking-ops-status::after {
-    content: 'WIP';
 }
 
 #grid-cover-astragarden {
