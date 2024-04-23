@@ -133,11 +133,6 @@ video {
 
 #grid-cover-syne {
     background-image: url(../img/projects/syne/Syne.png);
-    filter: blur(var(--status-blur-amount));
-}
-
-#syne-status::after {
-    content: 'WIP';
 }
 
 .project-item-status {
