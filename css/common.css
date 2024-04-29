@@ -7,6 +7,10 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--scroll-padding, 70px);
+    
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,12 +18,17 @@ body {
 
     background-color: #222;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .content {
     display: flex;
     flex-flow: column wrap;
-    /* animation: scroll-content-animation 1000ms ease-out 5000ms forwards; */
+
+    width: 100%;
 }
 
 a {
