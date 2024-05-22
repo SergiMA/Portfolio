@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
                 behaviour: "smooth"
             });
         }
-    }, 5000);
+    }, 2000);
 
     // Detect if user has scrolled
     window.addEventListener("scroll", function() {
