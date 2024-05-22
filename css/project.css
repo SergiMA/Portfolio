@@ -66,10 +66,12 @@ body.background-image-spacecraft-wreck {
 
 .project-state-row>.project-state-row-heading {
     width: 140px;
+    margin: auto;
 }
 
 .project-state-row>.project-state-row-content {
     width: 200px;
+    margin: auto;
 }
 
 /* Project information - Body */

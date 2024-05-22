@@ -80,6 +80,22 @@ a {
     color: cyan;
 }
 
+/* Global - Buttons */
+.light-theme-button {
+    padding: 5px 10px;
+
+    background-color: rgba(255, 73, 41, 0.7);
+    border-radius: 5px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.light-theme-button:hover {
+    background-color: rgba(255, 73, 41, 1);
+}
+
 /* Header - General */
 header {
     width: 100%;
