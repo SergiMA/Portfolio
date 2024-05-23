@@ -27,6 +27,32 @@ window.addEventListener("load", function() {
     });
 });
 
+// Navigation menu
+window.addEventListener('scroll', highlightCurrentNavSection);
+
+let currentSection;
+highlightCurrentNavSection();
+
+function highlightCurrentNavSection() {
+    const navLinkElements = document.querySelectorAll('.nav-link');
+    const sectionElements = document.querySelectorAll('.section');
+
+    sectionElements.forEach(sectionElement => {
+        if (window.scrollY >= (sectionElement.offsetTop - sectionElement.clientHeight / 6)) {
+            currentSection = sectionElement.id;
+        }
+    });
+
+    navLinkElements.forEach(navLinkElement => {
+        if (navLinkElement.firstChild.href.includes(currentSection)){
+            navLinkElement.classList.add('nav-link-active');
+        }
+        else {
+            navLinkElement.classList.remove('nav-link-active');
+        }
+    });
+}
+
 // Image sliders
 window.onload = function()
 {

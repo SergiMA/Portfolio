@@ -182,6 +182,10 @@ header {
     color: cyan;
 }
 
+.nav-link-active>a {
+    color:cyan;
+}
+
 /* Header - Cover videos */
 #cover-video-wrapper {
     position: relative;
