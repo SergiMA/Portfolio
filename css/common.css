@@ -18,6 +18,9 @@
     --dark-theme-text-normal-color: white;
     --dark-theme-text-subtle-color: #CCC;
 
+    /* Text sizes variables */
+    --line-height: 1.5em;
+
     /* Button variables */
     --light-theme-button-color: rgba(255, 73, 41, 0.7);
     --light-theme-button-highlighted-color: rgba(255, 73, 41, 1);
@@ -57,6 +60,16 @@ a {
     text-decoration: none;
     color: white;
 }
+
+p {
+    line-height: var(--line-height);
+}
+
+li {
+    line-height: var(--line-height);
+}
+
+
 
 /* Global - Theme styles */
 .light-theme-section {
