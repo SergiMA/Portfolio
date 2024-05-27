@@ -10,11 +10,11 @@
     --dark-theme-background-color: black;
 
     /* Text color variables */
-    --light-theme-text-heading-color: white;
+    --light-theme-text-heading-color: black;
     --light-theme-text-normal-color: #444;
     --light-theme-text-subtle-color: #777;
     
-    --dark-theme-text-heading-color: black;
+    --dark-theme-text-heading-color: white;
     --dark-theme-text-normal-color: white;
     --dark-theme-text-subtle-color: #CCC;
 
@@ -86,7 +86,6 @@ a {
     width: fit-content;
     text-align: center;
     color: var(--light-theme-text-heading-color);
-    background-color: #000;
 }
 
 .dark-theme-normal {
@@ -103,7 +102,6 @@ a {
     width: fit-content;
     text-align: center;
     color: var(--dark-theme-text-heading-color);
-    background-color: #FFF;
 }
 
 
