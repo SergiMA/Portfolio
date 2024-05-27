@@ -46,8 +46,6 @@ video {
 
 .profile-picture-container>img {
     width: 100%;
-
-    border-radius: 10%;
 }
 
 .info-header {
@@ -68,7 +66,6 @@ video {
     width: 100%;
 
     color: white;
-    background-color: black;    
 }
 
 .grid-container {
@@ -199,8 +196,6 @@ video {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-
-    background-color: white;
 }
 
 /* Footer - Contact me */
@@ -209,8 +204,6 @@ video {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-
-    background-color: black;
 }
 
 .contact-content {

@@ -40,13 +40,6 @@ body.background-image-spacecraft-wreck {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    
-    /* max-width: 1000px; */
-    /* margin: 100px auto 0 auto; */
-
-
-    /* border-radius: 20px; */
-    background-color: white;
 }
 
 #project-info>h1 {

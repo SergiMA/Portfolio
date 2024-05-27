@@ -1,7 +1,29 @@
 /* Global */
 :root {
+    /* Blur variables */
     --status-blur-amount: 10px;
     --title-backdrop-blur-amount: 5px;
+
+    /* Background color variables */
+    --light-theme-background-color: white;
+
+    --dark-theme-background-color: black;
+
+    /* Text color variables */
+    --light-theme-text-heading-color: white;
+    --light-theme-text-normal-color: #444;
+    --light-theme-text-subtle-color: #777;
+    
+    --dark-theme-text-heading-color: black;
+    --dark-theme-text-normal-color: white;
+    --dark-theme-text-subtle-color: #CCC;
+
+    /* Button variables */
+    --light-theme-button-color: rgba(255, 73, 41, 0.7);
+    --light-theme-button-highlighted-color: rgba(255, 73, 41, 1);
+
+    /* Other variables */
+    --border-radius-preferred: 5px;
 }
 
 html {
@@ -36,17 +58,26 @@ a {
     color: white;
 }
 
+/* Global - Theme styles */
+.light-theme-section {
+    background-color: var(--light-theme-background-color);
+}
+
+.dark-theme-section {
+    background-color: var(--dark-theme-background-color);
+}
+
 /* Global - text styles */
 .bold {
     font-weight: bold;
 }
 
 .light-theme-normal {
-    color: #444;
+    color: var(--light-theme-text-normal-color);
 }
 
 .light-theme-subtle {
-    color: #777;
+    color: var(--light-theme-text-subtle-color);
 }
 
 .light-theme-heading {
@@ -54,16 +85,16 @@ a {
     padding: 20px 20px;
     width: fit-content;
     text-align: center;
-    color: white;
+    color: var(--light-theme-text-heading-color);
     background-color: #000;
 }
 
 .dark-theme-normal {
-    color: white;
+    color: var(--dark-theme-text-normal-color);
 }
 
 .dark-theme-subtle {
-    color: #CCC;
+    color: var(--dark-theme-text-subtle-color);
 }
 
 .dark-theme-heading {
@@ -71,7 +102,7 @@ a {
     padding: 20px 20px;
     width: fit-content;
     text-align: center;
-    color: black;
+    color: var(--dark-theme-text-heading-color);
     background-color: #FFF;
 }
 
@@ -84,8 +115,8 @@ a {
 .light-theme-button {
     padding: 5px 10px;
 
-    background-color: rgba(255, 73, 41, 0.7);
-    border-radius: 5px;
+    background-color: var(--light-theme-button-color);
+    border-radius: var(--border-radius-preferred);
 
     color: white;
 
@@ -93,7 +124,12 @@ a {
 }
 
 .light-theme-button:hover {
-    background-color: rgba(255, 73, 41, 1);
+    background-color: var(--light-theme-button-highlighted-color);
+}
+
+/* Global - Images */
+.bordered-image > img {
+    border-radius: var(--border-radius-preferred);
 }
 
 /* Header - General */
