@@ -190,12 +190,60 @@ video {
     font-size: 14px;
 }
 
-/* Section - My curriculum */
+/* Section - My resume */
 #my-cv {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.resume-area {
+    max-width: 1100px;
+    margin: 2em;
+    /* border: 1px solid red; */
+}
+
+#resume-area-skills-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:start;
+
+    gap: 10em;
+}
+
+.resume-activity-location {
+    max-width: 1100px;
+    
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+.resume-activity-location > p {
+    margin: 10px 0;
+}
+
+.resume-activity-date {
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+.resume-activity-date > p {
+    margin: 10px 0;
+}
+
+.resume-subtle {
+    color: #949494;
+}
+
+h2.resume-heading {
+    margin: auto;
+    margin-top: 3em;
+}
+
+h3.resume-normal {
+    margin: auto;
+    margin-top: 2em;
 }
 
 /* Footer - Contact me */
@@ -247,8 +295,32 @@ video {
 /* Media queries */
 @media only screen and (max-width: 621px)
 {
-    /* Section - Curriculum */
+    /* Section-Curriculum - Global */
     #my-cv > .pdf-attached {
         width: 90%;
+    }
+
+    /* Section-Curriculum - Location and time */
+    .resume-activity-location {
+        display: block;
+    }
+
+    .resume-activity-date {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 597px) {
+    /* Section-Curriculum - Skills lists */
+    #resume-area-skills-section {
+        justify-content: space-around;
+        gap: 0;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    /* Section-Curriculum - Skills list */
+    #resume-area-skills-section {
+        flex-flow: column wrap;
     }
 }
