@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/normalize.css">
 
-    <script src="js/fontawesome.js" crossorigin="anonymous"></script>
+    <script src="js/all.js" crossorigin="anonymous"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/common.js"></script>
 </head>
@@ -418,25 +418,60 @@
                 </div>
 
                 <div class="contact-content">
-                    <p class="dark-theme-normal">
-                        Feel free to send me a message at my email
-                        <a href="mailto:sergimonzoareste@gmail.com" class="link">sergimonzoareste@gmail.com</a>
-                    </p>
-                    <div id="social-media">
-                        <a href="https://www.linkedin.com/in/sergi-monzo-areste/">
-                            <i class="fa-brands fa-linkedin linkedin-icon"></i>
-                        </a>
-                        <a href="https://twitter.com/MonzoSergi">
-                            <i class="fa-brands fa-square-twitter twitter-icon"></i>
-                        </a>
-                        <a href="https://smonzo.itch.io/">
-                            <i class="fa-brands fa-itch-io itch-io-icon"></i>
+                    <div class="contact-content-links">
+                        <p class="dark-theme-normal">
+                            For more information about me, like social media, published games, or code, check out 
+                            my Linktree.
+                        </p>
+                        <p class="dark-theme-normal">Or send me a direct message using the form on the right. </p>
+                        <a href="https://linktr.ee/sergimonzo">
+                            <span class="light-theme-button">Linktree</span>
                         </a>
                     </div>
+                    <form target="_blank" action="https://formsubmit.co/00863b03963826f16dcc4d6c825da89e" method="POST" name="name" id="contact-form">
+                        <input placeholder="Name*" required/>
+                        <input type="email" placeholder="Email*" required name="email"/>
+                        <input type="text" placeholder="Subject" size="20"/>
+                        <textarea placeholder="Message" name="message"></textarea>
+                        <input type="submit" class="light-theme-button" value="Send"/>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+    <footer class="dark-theme-section">
+        <!-- <div id="social-media">
+            <a href="https://www.linkedin.com/in/sergi-monzo-areste/">
+                <i class="fa-brands fa-linkedin linkedin-icon"></i>
+            </a>
+            <a href="https://twitter.com/MonzoSergi">
+                <i class="fa-brands fa-square-twitter twitter-icon"></i>
+            </a>
+            <a href="https://smonzo.itch.io/">
+                <i class="fa-brands fa-itch-io itch-io-icon"></i>
+            </a>
+        </div> -->
+        <div class="footer-grid">
+            <div>
+                <p class="dark-theme-normal bold">Portfolio</p>
+                <a href="https://smonzo.itch.io/">
+                    <p class="dark-theme-subtle dark-theme-link"><i class="fa-brands fa-itch-io"></i> Itch.io</p>
+                </a>
+                <a href="https://github.com/SergiMA">
+                    <p class="dark-theme-subtle dark-theme-link"><i class="fa-brands fa-github"></i> GitHub</p>
+                </a>
+            </div>
+            <div>
+                <p class="dark-theme-normal bold">Network</p>
+                <a href="https://www.linkedin.com/in/sergi-monzo-areste/">
+                    <p class="dark-theme-subtle dark-theme-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
+                </a>
+                <a href="https://twitter.com/MonzoSergi">
+                    <p class="dark-theme-subtle dark-theme-link"><i class="fa-brands fa-square-x-twitter"></i> X / Twitter</p>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
