@@ -383,6 +383,66 @@ header {
     opacity: 1;
 }
 
+/* Footer */
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 200px;
+}
+
+footer > .footer-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 30px;
+
+    max-width: 500px;
+    margin: auto;
+}
+
+footer > .footer-grid > div {
+    margin: 30px;
+}
+
+#social-media {
+    margin-bottom: 100px;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+    gap: 50px;
+
+    font-size: 50px;
+}
+
+#social-media>a {
+    margin: 10px;
+}
+
+.twitter-icon,
+.linkedin-icon,
+.itch-io-icon {
+    color: white;
+    transition: color 0.5s;
+}
+
+.twitter-icon:hover {
+    color: #1D9BF0;
+}
+
+.linkedin-icon:hover {
+    color: #0A66C2;
+}
+
+.itch-io-icon:hover {
+    color: #FF2449;
+}
+
 /* Glitch effect animation */
 @keyframes glitch-animation-1 {
     0% {
@@ -647,5 +707,17 @@ header {
 
     .backdrop-filter-blur {
         backdrop-filter: blur(10px);
+    }
+}
+
+@media only screen and (max-width: 291px) {
+    footer > .footer-grid {
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 10px;
+    }
+
+    footer > .footer-grid > div {
+        margin: 10px;
     }
 }

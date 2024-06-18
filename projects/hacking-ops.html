@@ -19,6 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script src="../js/all.js" crossorigin="anonymous"></script>
+    <script src="../js/smoothscroll.js"></script>
     <script src="../js/common.js"></script>
 </head>
 
@@ -55,17 +56,10 @@
 
     <section>
         <div id="project-info" class="backdrop-filter-blur light-theme-section">
-            <div class="glitchedHeading">
-                <h1 class="glitched-appear-on-scroll light-theme-heading">Hacking Ops</h1>
-                <div class="glitch-layers">
-                    <div class="glitch-layer"><h1 class="light-theme-heading">Hacking Ops</h1></div>
-                    <div class="glitch-layer"><h1 class="light-theme-heading">Hacking Ops</h1></div>
-                    <div class="glitch-layer"><h1 class="light-theme-heading">Hacking Ops</h1></div>
-                </div>
-            </div>
+            <h1 class="glitched-appear-on-scroll light-theme-heading">Hacking Ops</h1>
             <div id="project-header">
                 <div id="project-state">
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Project status</p>
                         </div>
@@ -73,7 +67,7 @@
                             <p class="light-theme-normal">Published</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Project type</p>
                         </div>
@@ -81,7 +75,7 @@
                             <p class="light-theme-normal">Bootcamp project</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Game Engine</p>
                         </div>
@@ -89,7 +83,7 @@
                             <p class="light-theme-normal">Unity</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Languages used</p>
                         </div>
@@ -97,7 +91,7 @@
                             <p class="light-theme-normal">C#</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Primary role(s)</p>
                         </div>
@@ -105,7 +99,7 @@
                             <p class="light-theme-normal">Solo developer</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Download</p>
                         </div>
@@ -119,12 +113,12 @@
             </div>
 
             <div id="project-body">
-                <p class="light-theme-normal">
+                <p class="light-theme-normal appear-on-scroll">
                     Hacking Ops is a sci-fi action/stealth game where you play as a hacker who works for a rebel group fighting against a tyrannical corporation.
                     Your mission is to infiltrate the enemy’s headquarters and steal the blueprint of a secret project that could threaten humanity.
                     You can use your hacking device, different kinds of weapons, and your stealth skills to complete your mission.
                 </p>
-                <p class="light-theme-normal">
+                <p class="light-theme-normal appear-on-scroll">
                     My main focus in the game has been coding. I used this game to learn and test good clean code practices, trying to follow the SOLID principles
                     and applying multiple design patterns. I developed many things I had never tried before and created code that can be easily exported to other projects.
                     Some of the things I programmed include an inventory system based on weapon holsters, a quest system, IK system, AI, ranged and
@@ -135,7 +129,7 @@
                 <div class="accordion light-theme-normal">
                     <div>
                         <input type="checkbox" name="hacking-ops-quest-system-accordion" id="hacking-ops-quest-system" class="accordion-input">
-                        <label for="hacking-ops-quest-system" class="accordion-label">Quest system</label>
+                        <label for="hacking-ops-quest-system" class="accordion-label appear-on-scroll">Quest system</label>
                         <div class="accordion-content">
                             <p>
                                 As an example of code, I'll show the Quest System. This system has been made with the primary intention of connecting things in a scene
@@ -414,6 +408,28 @@ namespace HackingOps.Common.QuestSystem.Quests
             </div>
         </div>
     </section>
+    <footer class="dark-theme-section">
+        <div class="footer-grid">
+            <div>
+                <p class="dark-theme-normal bold appear-on-scroll">Portfolio</p>
+                <a href="https://smonzo.itch.io/">
+                    <p class="dark-theme-subtle dark-theme-link appear-on-scroll"><i class="fa-brands fa-itch-io"></i> Itch.io</p>
+                </a>
+                <a href="https://github.com/SergiMA">
+                    <p class="dark-theme-subtle dark-theme-link appear-on-scroll"><i class="fa-brands fa-github"></i> GitHub</p>
+                </a>
+            </div>
+            <div>
+                <p class="dark-theme-normal bold appear-on-scroll">Network</p>
+                <a href="https://www.linkedin.com/in/sergi-monzo-areste/">
+                    <p class="dark-theme-subtle dark-theme-link appear-on-scroll"><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
+                </a>
+                <a href="https://twitter.com/MonzoSergi">
+                    <p class="dark-theme-subtle dark-theme-link appear-on-scroll"><i class="fa-brands fa-square-x-twitter"></i> X / Twitter</p>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

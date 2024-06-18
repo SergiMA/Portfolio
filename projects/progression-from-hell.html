@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
 
     <script src="../js/all.js" crossorigin="anonymous"></script>
+    <script src="../js/smoothscroll.js"></script>
     <script src="../js/common.js"></script>
 </head>
 
@@ -51,19 +52,10 @@
 
     <section>
         <div id="project-info" class="backdrop-filter-blur light-theme-section">
-            <!-- Project title -->
-            <div class="glitchedHeading">
-                <h1 class="glitched-appear-on-scroll light-theme-heading">Progression from Hell</h1>
-                <div class="glitch-layers">
-                    <div class="glitch-layer"><h1 class="light-theme-heading">Progression from Hell</h1></div>
-                    <div class="glitch-layer"><h1 class="light-theme-heading">Progression from Hell</h1></div>
-                    <div class="glitch-layer"><h1 class="light-theme-heading">Progression from Hell</h1></div>
-                </div>
-            </div>
+            <h1 class="appear-on-scroll light-theme-heading">Progression from Hell</h1>
             <div id="project-header">
-                <!-- Project state (table style) -->
                 <div id="project-state">
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Project status</p>
                         </div>
@@ -71,7 +63,7 @@
                             <p class="light-theme-normal">Released</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Project type</p>
                         </div>
@@ -79,7 +71,7 @@
                             <p class="light-theme-normal">Game Jam project</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Project duration</p>
                         </div>
@@ -87,7 +79,7 @@
                             <p class="light-theme-normal">3 days</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Game Engine</p>
                         </div>
@@ -95,7 +87,7 @@
                             <p class="light-theme-normal">Unity</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Languages used</p>
                         </div>
@@ -103,7 +95,7 @@
                             <p class="light-theme-normal">C#</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Primary role(s)</p>
                         </div>
@@ -111,7 +103,7 @@
                             <p class="light-theme-normal">Generalist programmer</p>
                         </div>
                     </div>
-                    <div class="project-state-row">
+                    <div class="project-state-row appear-on-scroll">
                         <div class="project-state-item project-state-row-heading bold">
                             <p class="light-theme-normal">Download</p>
                         </div>
@@ -125,27 +117,49 @@
             </div>
 
             <div id="project-body">
-                <p class="light-theme-normal">
+                <p class="light-theme-normal appear-on-scroll">
                     Progression from Hell is a 3D top-down dungeon crawler game done for the GDL Game Jam with a team of
                     two members
                 </p>
-                <p class="light-theme-normal">
+                <p class="light-theme-normal appear-on-scroll">
                     You are a mercenary who was commissioned to assassinate another person. You took the job and went
                     looking for your target. You found him, but your target was already waiting for you. You fought to
                     the death and died. After that, you wake up and find in front of you a demon. He offers to revive
                     you and give you the power to take revenge if you do a job for him. Kill all the angels that are
                     raiding Hell. You accept the order and take a gun. It's time to work.
                 </p>
-                <p class="light-theme-normal">
+                <p class="light-theme-normal appear-on-scroll">
                     I contributed with an AI behaviour using finite state machines, a cutscene system with a caption
                     system, trapping the player in rooms and spawning the enemies.
                 </p>
-                <p class="light-theme-normal">
+                <p class="light-theme-normal appear-on-scroll">
                     You can download the game <a href="https://smonzo.itch.io/progression-from-hell" class="link">here</a>
                 </p>
             </div>
         </div>
     </section>
+    <footer class="dark-theme-section">
+        <div class="footer-grid">
+            <div>
+                <p class="dark-theme-normal bold appear-on-scroll">Portfolio</p>
+                <a href="https://smonzo.itch.io/">
+                    <p class="dark-theme-subtle dark-theme-link appear-on-scroll"><i class="fa-brands fa-itch-io"></i> Itch.io</p>
+                </a>
+                <a href="https://github.com/SergiMA">
+                    <p class="dark-theme-subtle dark-theme-link appear-on-scroll"><i class="fa-brands fa-github"></i> GitHub</p>
+                </a>
+            </div>
+            <div>
+                <p class="dark-theme-normal bold appear-on-scroll">Network</p>
+                <a href="https://www.linkedin.com/in/sergi-monzo-areste/">
+                    <p class="dark-theme-subtle dark-theme-link appear-on-scroll"><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
+                </a>
+                <a href="https://twitter.com/MonzoSergi">
+                    <p class="dark-theme-subtle dark-theme-link appear-on-scroll"><i class="fa-brands fa-square-x-twitter"></i> X / Twitter</p>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
